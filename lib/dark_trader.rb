@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'nokogiri'
 require 'open-uri'
-require 'pry'
 
 PAGE_URL = "https://coinmarketcap.com/all/views/all/"
 

@@ -15,7 +15,7 @@ def crypto_symbols
   crypto_symbols_array = [] #pour réunir les smboles
   index = 0 
   scrapping_crypto_symbols.each do |element| #va boucler sur chaque row
-    if index >= 3 #va limiter à 3 itérations => 3 éléments scrappés
+    if index >= 19 #va limiter à 3 itérations => 3 éléments scrappés
       break #stoppe la boucle
     else
       crypto_symbols_array << element.text #ajoute mon élément à chaque boucle
@@ -32,7 +32,7 @@ def crypto_prices
   crypto_prices_array = [] #pour réunir les smboles
   index = 0
   scrapping_crypto_prices.each do |element|
-    if index >=3
+    if index >= 19
       break
     else
       crypto_prices_array << element.text

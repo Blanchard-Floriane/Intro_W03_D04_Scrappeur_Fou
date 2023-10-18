@@ -38,8 +38,12 @@ def get_townhall_email(val_oise_city_list)
     page = Nokogiri::HTML(URI.open("http://annuaire-des-mairies.com#{city_url}"))
     scrapping_per_city = page.xpath('//td[contains(text(), "@")]')
 
-    scrapping_per_city.each do |email|
-      emails_array << email.text
+    if scrapping_per_city.empty?
+      emails_array << "no email"
+    else
+      scrapping_per_city.each do |email|
+        emails_array << email.text
+      end
     end
   end
   #puts emails_array
